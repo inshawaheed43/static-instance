@@ -6,16 +6,43 @@
 
         Student Ali = new Student();
         Ali.rollNo = 23;
+        Ali.firstname = "Ali";
+        Ali.lastname = "Khan";
+        Ali.standard = 4;
         Student Zain = new Student();
         Zain.rollNo = 25;
-        Console.WriteLine(Ali.rollNo + " " + Zain.rollNo);
+        Zain.firstname = "Zain ";
+        Zain.lastname = "Ali";
+        Zain.standard = 4;
+        Console.WriteLine(Ali.rollNo);
+        Console.WriteLine(Ali.firstname);
+        Console.WriteLine(Ali.lastname);
+        Console.WriteLine(Ali.standard);
+        Ali.printFullName();
+
+        Console.WriteLine("------------------------------------------");
+        Console.WriteLine(Zain.rollNo);
+        Console.WriteLine(Zain.firstname);
+        Console.WriteLine(Zain.lastname);
+        Console.WriteLine(Zain.standard);
+        Zain.printFullName();
+
+
     }
 }
 
 class Student {
     public int rollNo;
-    string firstname;
-    string lastname;
-    int standard;
+    public string firstname;
+    public string lastname;
+    public int standard;
+
+
+    public void printFullName()
+    {
+        string fullname = this.firstname + " " + this.lastname;
+
+        Console.WriteLine("your full name is {0}", fullname);
+    }
 
 }
