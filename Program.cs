@@ -25,7 +25,9 @@
         Console.WriteLine(Ali.standard);
         Ali.printFullName();
         Console.WriteLine(Student.schoolName);
-        Console.WriteLine(Student.fees);
+        Console.WriteLine(Student.getFees());
+        Console.WriteLine(Student.getFeesAnnualIncrement(3000));
+
 
 
         Console.WriteLine("------------------------------------------");
@@ -35,7 +37,9 @@
         Console.WriteLine(Zain.standard);
         Zain.printFullName();
         Console.WriteLine(Student.schoolName);
-        Console.WriteLine(Student.fees);
+        Console.WriteLine(Student.getFees());
+        Console.WriteLine(Student.getFeesAnnualIncrement(3000));
+
 
 
 
@@ -68,6 +72,12 @@ class Student {
     {
         return fees;
 
+    }
+
+    public static int getFeesAnnualIncrement(int fee)
+    {
+        return fee / 10;
+         
     }
 
 }
